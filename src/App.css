@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background: #007bff;
 }
@@ -16,14 +20,27 @@ body {
   background: #007bff;
 }
 
+#root {
+  height: 100%;
+}
+
+.App {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .start_btn,
 .info_box,
 .quiz_box,
 .result_box {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 100%;
 }
@@ -34,7 +51,7 @@ body {
   opacity: 1;
   z-index: 5;
   pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
 }
 
 .start_btn button {
@@ -53,7 +70,7 @@ body {
   width: 540px;
   background: #fff;
   border-radius: 5px;
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: scale(0.9);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -108,10 +125,10 @@ body {
 }
 
 .quiz_box {
-  width: 550px;
+  width: 700px;
   background: #fff;
   border-radius: 5px;
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: scale(0.9);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
@@ -179,8 +196,8 @@ body {
 section {
   padding: 25px 30px 20px 30px;
   background: #fff;
-  overflow: scroll;
-  height: 525px;
+  /* overflow: scroll; */
+  /* height: 525px; */
 }
 
 section .que_text {
@@ -327,7 +344,7 @@ footer button.show {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: scale(0.9);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;

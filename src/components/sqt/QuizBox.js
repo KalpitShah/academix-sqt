@@ -131,7 +131,7 @@ function QuizBox() {
       <>
         <div className="quiz_box activeInfo activeQuiz">
           <header>
-            <div className="title">Awesome Quiz Application</div>
+            <div className="title">Academix SQT</div>
             <div className="time_line"></div>
           </header>
           <section>

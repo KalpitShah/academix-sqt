@@ -40,7 +40,7 @@ function InfoBox({ setOpenInfo }) {
   };
   return (
     <>
-      <div className={openQuiz ? "info_box" : "info_box activeInfo"}>
+      {!openQuiz && <div className={openQuiz ? "info_box" : "info_box activeInfo"}>
         <div className="info-title">
           <span>Some Rules of this Quiz</span>
         </div>
@@ -69,7 +69,7 @@ function InfoBox({ setOpenInfo }) {
             Continue
           </button>
         </div>
-      </div>
+      </div>}
       {openQuiz && <QuizBox openQuiz={openQuiz} />}
     </>
   );

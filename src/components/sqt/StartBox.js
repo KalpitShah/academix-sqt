@@ -9,9 +9,9 @@ function StartBox() {
   };
   return (
     <>
-      <div className="start_btn">
+      {!openInfo && <div className="start_btn">
         <button onClick={handleClick}>Start Quiz</button>
-      </div>
+      </div>}
       {openInfo && <InfoBox setOpenInfo={setOpenInfo} />}
     </>
   );
