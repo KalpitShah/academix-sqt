@@ -70,6 +70,8 @@ function QuizBox() {
         return acc;
       }, []);
       setUnChoosenQue(s);
+      setTimeout(() => document.querySelector('.error_text:not([hidden])').parentNode.scrollIntoView(), 100);
+
     } else if (lastCat) {
       const marksSum = marksArr[currCategory].reduce((total, item) => {
         return total + item;
@@ -101,6 +103,7 @@ function QuizBox() {
       setCatIndex(++catIndex);
       setCurrCategory(categories[catIndex]);
       setUnChoosenQue([]);
+      window.scrollTo(0, 0)
     }
   };
 
