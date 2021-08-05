@@ -155,7 +155,7 @@ const captions = {
 };
 
 function Report(prop) {
-    const { marksObtained } = useContext(QuestionContext);
+    const { marksObtained, userInfo } = useContext(QuestionContext);
 
     const classes = useStyles()
 
@@ -193,7 +193,7 @@ function Report(prop) {
                     </div>
                     <div className={classes.reportHeaderText}>
                         <div>
-                            <h1>Hey, AIC GUSEC TEAM!</h1>
+                            <h1>Hey, {userInfo.name}!</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper mauris eget dolor aliquam </p>
                         </div>
                     </div>
@@ -215,15 +215,15 @@ function Report(prop) {
                         </div>
                     </div>
                     <div className={classes.skillGrid}>
-                        <ReportItem image="img/problem-solving.png" title="Problem Solving" percentage={marksObtained["Problem Solving"] * 100} />
+                        <ReportItem image="img/problem-solving.png" title="Problem Solving" percentage={parseInt(marksObtained["Problem Solving"] * 100)} />
 
-                        <ReportItem image="img/mind.png" title="Design Thinking" percentage={marksObtained["Design Thinking"] * 100} />
+                        <ReportItem image="img/mind.png" title="Design Thinking" percentage={parseInt(marksObtained["Design Thinking"] * 100)} />
 
-                        <ReportItem image="img/teamwork.png" title="Team Work" percentage={marksObtained["Resilience"] * 100} />
+                        <ReportItem image="img/teamwork.png" title="Team Work" percentage={parseInt(marksObtained["Resilience"] * 100)} />
 
-                        <ReportItem image="img/willpower.png" title="Resilience" percentage={marksObtained["Team Work"] * 100} />
+                        <ReportItem image="img/willpower.png" title="Resilience" percentage={parseInt(marksObtained["Team Work"] * 100)} />
 
-                        <ReportItem image="img/group.png" title="Effective Communication" percentage={marksObtained["Effective Communication"] * 100} />
+                        <ReportItem image="img/group.png" title="Effective Communication" percentage={parseInt(marksObtained["Effective Communication"] * 100)} />
                     </div>
                     <div className={classes.downloadText}>
                         <p>Download your assessment report <a href="#" onClick={printReport}>here</a></p>

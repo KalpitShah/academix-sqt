@@ -3,6 +3,12 @@ import React, { createContext, useState } from "react";
 export const QuestionContext = createContext();
 
 export const QuestionProvider = (props) => {
+  const [userInfo, setUserInfo] = useState({
+    "name": "",
+    "email": "",
+    "contact": "",
+  });
+
   const [questions, setQuestions] = useState({});
   // https://hackernoon.com/accessing-nested-objects-in-javascript-f02f1bd6387f
   const [optionChoosen, setOptionChoosen] = useState({
@@ -41,6 +47,8 @@ export const QuestionProvider = (props) => {
     setMarksArr,
     showResult,
     setShowResult,
+    userInfo, 
+    setUserInfo,
   };
   return (
     <QuestionContext.Provider value={value}>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import QuizBox from "./QuizBox";
-import firebase from "../../firebase";
+import firebase from "./firebase";
 import { QuestionContext } from "../../contexts/QuestionContext";
 
 function InfoBox({ setOpenInfo }) {
@@ -34,7 +34,7 @@ function InfoBox({ setOpenInfo }) {
       });
   }, [setQuestions]);
 
-  const handelClick = () => {
+  const handleClick = () => {
     setOpenQuiz(true);
     // console.log(questions)
   };
@@ -65,7 +65,7 @@ function InfoBox({ setOpenInfo }) {
           <button className="quit" onClick={() => setOpenInfo(false)}>
             Exit Quiz
           </button>
-          <button className="restart" onClick={handelClick}>
+          <button className="restart" onClick={handleClick}>
             Continue
           </button>
         </div>

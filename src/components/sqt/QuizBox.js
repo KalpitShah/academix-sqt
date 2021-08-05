@@ -1,6 +1,7 @@
 import { CircularProgress } from "@material-ui/core";
 import React, { useContext, useEffect, useState } from "react";
 import { QuestionContext } from "../../contexts/QuestionContext";
+import firebase from "./firebase";
 
 function QuizBox() {
   // activeQuiz
@@ -12,6 +13,7 @@ function QuizBox() {
     marksArr,
     setMarksArr,
     setShowResult,
+    userInfo
   } = useContext(QuestionContext);
 
   let categories = Object.keys(questions);
@@ -85,7 +87,43 @@ function QuizBox() {
         ...prevState,
         [currCategory]: calculatedMarks,
       }));
-      submitQuiz();
+
+
+      const catMarks = {
+        "Design Thinking": (4*marksArr["Design Thinking"].reduce((total, item) => {
+          return total + item;
+        }, 0)),
+        "Effective Communication": (4*marksArr["Effective Communication"].reduce((total, item) => {
+          return total + item;
+        }, 0)),
+        "Problem Solving": (4*marksArr["Problem Solving"].reduce((total, item) => {
+          return total + item;
+        }, 0)),
+        "Resilience": (4*marksArr["Resilience"].reduce((total, item) => {
+          return total + item;
+        }, 0)),
+        "Team Work": (4*marksArr["Team Work"].reduce((total, item) => {
+          return total + item;
+        }, 0)),
+      }
+
+      const db = firebase.firestore();
+      const ref = db.collection("userInput").doc("Kalpit Shah").set(
+        { name: userInfo.name, email: userInfo.email, contact: userInfo.contact, marks: {
+          catMarks,
+          "Total": parseInt((catMarks["Design Thinking"] + catMarks["Effective Communication"] + catMarks["Problem Solving"] + catMarks["Resilience"] + catMarks["Team Work"])/5),
+        } }
+      )
+      .then(() => {
+        submitQuiz();
+        window.scrollTo(0, 0);
+      })
+      .catch((error) => {
+        alert("Something went wrong!");
+        console.error("Error adding document: ", error);
+      });;
+
+
       return;
     } else {
       const marksSum = marksArr[currCategory].reduce((total, item) => {
