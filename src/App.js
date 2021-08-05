@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./App.css";
 import ResultBox from "./components/sqt/ResultBox";
 import StartBox from "./components/sqt/StartBox";
+import Report from "./components/sqt/Report";
 import { QuestionContext } from "./contexts/QuestionContext";
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="App">{!showResult ? <StartBox /> : <ResultBox />}</div>
+      <div className="App">{!showResult ? <StartBox /> : <Report />}</div>
     </>
   );
 }

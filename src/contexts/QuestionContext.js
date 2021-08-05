@@ -9,7 +9,7 @@ export const QuestionProvider = (props) => {
     "Design Thinking": {},
     "Effective Communication": {},
     "Problem Solving": {},
-    Resilience: {},
+    "Resilience": {},
     "Team Work": {},
   });
 
@@ -17,7 +17,7 @@ export const QuestionProvider = (props) => {
     "Design Thinking": [],
     "Effective Communication": [],
     "Problem Solving": [],
-    Resilience: [],
+    "Resilience": [],
     "Team Work": [],
   });
 
@@ -25,7 +25,7 @@ export const QuestionProvider = (props) => {
     "Design Thinking": 0,
     "Effective Communication": 0,
     "Problem Solving": 0,
-    Resilience: 0,
+    "Resilience": 0,
     "Team Work": 0,
   });
 

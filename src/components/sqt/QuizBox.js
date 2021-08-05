@@ -138,7 +138,7 @@ function QuizBox() {
             <div className="time_line"></div>
           </header>
           <section>
-            <h5>{currCategory}</h5>
+            {/* <h5>{currCategory}</h5> */}
 
             {questions[currCategory].map((item, questionID) => (
               <div key={questionID}>
