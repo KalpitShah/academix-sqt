@@ -174,6 +174,10 @@ function Report(prop) {
 
     const overall = parseInt((marksObtained["Problem Solving"] + marksObtained["Design Thinking"] + marksObtained["Resilience"] + marksObtained["Team Work"] + marksObtained["Effective Communication"])*20)/100;
 
+    function printReport (){
+        window.print();
+    }
+
     return (
         <div className={classes.container}>
             <div className={classes.report}>
@@ -216,7 +220,7 @@ function Report(prop) {
                         <ReportItem image="img/group.png" title="Effective Communication" percentage={marksObtained["Effective Communication"] * 100} />
                     </div>
                     <div className={classes.downloadText}>
-                        <p>Download your assessment report <a href="#">here</a></p>
+                        <p>Download your assessment report <a href="#" onClick={printReport}>here</a></p>
                     </div>
                 </div>
             </div>
