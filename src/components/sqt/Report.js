@@ -172,7 +172,13 @@ function Report(prop) {
         }
     ];
 
-    const overall = parseInt((marksObtained["Problem Solving"] + marksObtained["Design Thinking"] + marksObtained["Resilience"] + marksObtained["Team Work"] + marksObtained["Effective Communication"])/5);
+    const overall = parseInt((marksObtained["Problem Solving"] + marksObtained["Design Thinking"] + marksObtained["Resilience"] + marksObtained["Team Work"] + marksObtained["Effective Communication"])*20);
+
+    console.log(marksObtained["Problem Solving"])
+    console.log(marksObtained["Design Thinking"])
+    console.log(marksObtained["Resilience"])
+    console.log(marksObtained["Team Work"])
+    console.log(marksObtained["Effective Communication"])
 
     function printReport (){
         window.print();
@@ -197,7 +203,7 @@ function Report(prop) {
                         <div className={classes.OverallText}>
                             <div>
                                 <h4>Overall Score Obtained</h4>
-                                <h1>{overall * 100}%</h1>
+                                <h1>{overall }%</h1>
                             </div>
                         </div>
                         <div className={classes.OverallGraph}>
