@@ -172,7 +172,7 @@ function Report(prop) {
         }
     ];
 
-    const overall = parseInt((marksObtained["Problem Solving"] + marksObtained["Design Thinking"] + marksObtained["Resilience"] + marksObtained["Team Work"] + marksObtained["Effective Communication"])*20)/100;
+    const overall = parseInt((marksObtained["Problem Solving"] + marksObtained["Design Thinking"] + marksObtained["Resilience"] + marksObtained["Team Work"] + marksObtained["Effective Communication"])/5);
 
     function printReport (){
         window.print();
