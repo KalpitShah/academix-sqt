@@ -204,8 +204,8 @@ function Report(prop) {
                     <div className={classes.reportOverallScontainer}>
                         <div className={classes.OverallText}>
                             <div>
-                                <h4>Overall Score Obtained</h4>
-                                <h1>{overall }%</h1>
+                                <h4>Your Cognitive Skill Score</h4>
+                                <h1>{overall}/100</h1>
                             </div>
                         </div>
                         <div className={classes.OverallGraph}>
