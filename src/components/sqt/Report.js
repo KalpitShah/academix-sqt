@@ -38,6 +38,10 @@ const useStyles = makeStyles({
         paddingLeft: '15px',
         paddingRight: '15px',
         justifyContent: 'center',
+        '& p': {
+            maxWidth: '800px',
+            margin: 'auto',
+        }
     },
     reportLogo: {
         padding: '15px',
