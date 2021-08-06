@@ -108,7 +108,7 @@ function QuizBox() {
       }
 
       const db = firebase.firestore();
-      const ref = db.collection("userInput").doc(userInfo.name).set(
+      db.collection("userInput").doc(userInfo.name).set(
         { name: userInfo.name, email: userInfo.email, contact: userInfo.contact, marks: {
           catMarks,
           "Total": parseInt((catMarks["Design Thinking"] + catMarks["Effective Communication"] + catMarks["Problem Solving"] + catMarks["Resilience"] + catMarks["Team Work"])/5),

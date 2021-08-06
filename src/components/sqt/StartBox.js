@@ -2,16 +2,23 @@ import React, { useState, useContext } from "react";
 import InfoBox from "./InfoBox";
 import TextField from "@material-ui/core/TextField";
 import { QuestionContext } from "../../contexts/QuestionContext";
-import firebase from "./firebase";
+import validator from 'validator'
 
 function StartBox() {
   const [openInfo, setOpenInfo] = useState(false);
+  const [vaildEmail, setValidEmail] = useState(true);
   const { userInfo, setUserInfo } = useContext(QuestionContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (validator.isEmail(userInfo.email)) {
+      setValidEmail(true);
+      setOpenInfo(true);
+    } else {
+      setValidEmail(false);
+    }
     
-    setOpenInfo(true);
   };
 
   const handleChange = (e) => {
@@ -50,6 +57,7 @@ function StartBox() {
               name="email"
               onChange={handleChange}
             />
+            { !vaildEmail ? <span style={{color: "red", fontSize: "14px"}}>Invalid Email</span> : null}
             <TextField
               variant="outlined"
               margin="normal"

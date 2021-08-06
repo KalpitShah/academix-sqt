@@ -30,6 +30,10 @@ const useStyles = makeStyles({
         borderRadius: '0px 0px 50px 50px',
         color: 'white',
         marginBottom: '40px',
+        '@media print and (max-width: 768px)': {
+            background: 'unset',
+            backgroundColor:'#2a5298',
+        },
     },
     reportHeaderText: {
         display: 'flex',
