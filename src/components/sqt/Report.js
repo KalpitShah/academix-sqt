@@ -32,7 +32,8 @@ const useStyles = makeStyles({
         marginBottom: '40px',
         '@media print and (max-width: 768px)': {
             background: 'unset',
-            backgroundColor:'#2a5298',
+            backgroundColor:'#2a5298 !important',
+            webkitPrintColorAdjust: 'exact',
         },
     },
     reportHeaderText: {
