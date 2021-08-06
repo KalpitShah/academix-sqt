@@ -201,7 +201,7 @@ function Report(prop) {
                     <div className={classes.reportHeaderText}>
                         <div>
                             <h1>Hey, {userInfo.name}!</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper mauris eget dolor aliquam </p>
+                            <p>This report will provide a quick overview of the attributes and skills based on the assessment, and help you to understand it which areas you need to work upon.</p>
                         </div>
                     </div>
                 </div>

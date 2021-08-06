@@ -46,19 +46,19 @@ function InfoBox({ setOpenInfo }) {
         </div>
         <div className="info-list">
           <div className="info">
-            1. You will have only <span>15 seconds</span> per each question.
+            1. Describe yourself as you generally are now, not as you wish to be in the future.
           </div>
           <div className="info">
-            2. Once you select your answer, it can't be undone.
+            2. Kindly fill the most appropriate answer based on your understanding to get accurate results.
           </div>
           <div className="info">
-            3. You can't select any option once time goes off.
+            3. Do no refresh while taking the test
           </div>
           <div className="info">
-            4. You can't exit from the Quiz while you're playing.
+            4. You'll be awarded points on the basis of your answers.
           </div>
           <div className="info">
-            5. You'll get points on the basis of your correct answers.
+            5. You can't quit once you start the Skill Quotient Test.
           </div>
         </div>
         <div className="buttons">
