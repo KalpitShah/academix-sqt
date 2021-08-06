@@ -30,11 +30,6 @@ const useStyles = makeStyles({
         borderRadius: '0px 0px 50px 50px',
         color: 'white',
         marginBottom: '40px',
-        '@media print and (max-width: 768px)': {
-            background: 'unset',
-            backgroundColor:'#2a5298 !important',
-            webkitPrintColorAdjust: 'exact',
-        },
     },
     reportHeaderText: {
         display: 'flex',
@@ -194,7 +189,7 @@ function Report(prop) {
     return (
         <div className={classes.container}>
             <div className={classes.report}>
-                <div className={classes.reportHeader}>
+                <div className={classes.reportHeader} style={{'-webkit-print-color-adjust': 'exact'}}>
                     <div className={classes.reportLogo}>
                         <img src="img/header-logo.png" alt="" />
                     </div>

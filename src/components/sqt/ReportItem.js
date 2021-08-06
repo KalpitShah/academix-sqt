@@ -37,7 +37,7 @@ function ReportItem(prop) {
             <img src={prop.image} alt="" />
             <h3>{prop.title}</h3>
             <div className={classes.progressBar}>
-                <ProgressBar height={12} labelSize={'0'} completed={prop.percentage} />
+                <ProgressBar style={{'-webkit-print-color-adjust': 'exact'}} height={12} labelSize={'0'} completed={prop.percentage} />
                 <h3>{prop.percentage}%</h3>
             </div>
             <div className={classes.skillLevel}>
