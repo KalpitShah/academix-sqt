@@ -21,6 +21,7 @@ const useStyles = makeStyles({
     },
     reportHeader: {
         background: 'url(img/header-bg.jpg)',
+        backgroundColor:'#2a5298',
         backgroundRepeat: 'no-repeat',
         width: '100%',
         backgroundSize: 'cover',
@@ -138,7 +139,8 @@ const useStyles = makeStyles({
             gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
         },
         '@media print': {
-            paddingTop: '20px',
+            paddingTop: '15px',
+            marginBottom: '0px',
         },
     },
 })

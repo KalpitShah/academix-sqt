@@ -13,9 +13,6 @@ const useStyles = makeStyles({
             maxHeight: '64px',
             marginBottom: '10px'
         },
-        '@media print': {
-            pageBreakAfter: 'always',
-        },
     },
     skillLevel: {
         display: 'flex',
