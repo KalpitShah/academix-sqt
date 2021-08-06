@@ -46,13 +46,13 @@ function InfoBox({ setOpenInfo }) {
         </div>
         <div className="info-list">
           <div className="info">
-            1. Describe yourself as you generally are now, not as you wish to be in the future.
+            1. Describe yourself as you are now, not as you wish to be in the future.
           </div>
           <div className="info">
             2. Kindly fill the most appropriate answer based on your understanding to get accurate results.
           </div>
           <div className="info">
-            3. Do no refresh while taking the test
+            3. Do no refresh while taking the test.
           </div>
           <div className="info">
             4. You'll be awarded points on the basis of your answers.

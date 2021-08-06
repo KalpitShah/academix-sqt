@@ -1,3 +1,11 @@
+#root > div > div > div > div > div > div > div > div > div {
+  -webkit-print-color-adjust: exact;
+}
+
+#root > div > div > div > div > div > div > div > div > div {
+  -webkit-print-color-adjust: exact;
+}
+
 /* importing google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
