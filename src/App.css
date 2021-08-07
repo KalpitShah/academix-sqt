@@ -6,6 +6,20 @@
   -webkit-print-color-adjust: exact;
 }
 
+td,
+th {
+  padding: 5px 10px;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 480px) {
+  td,
+  th {
+    font-size: 10px;
+    padding: 2px 2px;
+  }
+}
+
 /* importing google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
