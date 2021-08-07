@@ -42,7 +42,7 @@ function InfoBox({ setOpenInfo }) {
     <>
       {!openQuiz && <div className={openQuiz ? "info_box" : "info_box activeInfo"}>
         <div className="info-title">
-          <span>Some Rules of this Quiz</span>
+          <span>Some Rules of this Test</span>
         </div>
         <div className="info-list">
           <div className="info">
@@ -63,7 +63,7 @@ function InfoBox({ setOpenInfo }) {
         </div>
         <div className="buttons">
           <button className="quit" onClick={() => setOpenInfo(false)}>
-            Exit Quiz
+            Exit Test
           </button>
           <button className="restart" onClick={handleClick}>
             Continue
